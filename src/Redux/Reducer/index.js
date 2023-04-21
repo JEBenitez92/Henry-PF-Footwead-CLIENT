@@ -36,6 +36,7 @@ import {
   POST_PROMOTION,
   POST_USER_ADMIN,
   GET_SALES,
+  GET_PROMOTIONS
 } from "../Actions/actions";
 
 const initialState = {
