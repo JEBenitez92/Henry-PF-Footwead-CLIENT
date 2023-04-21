@@ -51,9 +51,9 @@ import {
   GET_SALES,
 } from "../Actions/actions.js";
 
-//const back = "http://localhost:3001";
+// const back = "http://localhost:3001";
 
-const back = "https://pf-henry-footwear-production.up.railway.app"; //prueba
+const back = "https://pf-henry-footwear-production.up.railway.app"; 
 
 
 export function getProducts() {
@@ -578,7 +578,7 @@ export const correoRegistroNewsletter = (correo) => {
   return async function (dispatch) {
     try {
       await axios.post(
-        `${back}/correo/registroNewsletter`,
+        `${back}/correo/bienvenida`,
         correo
       );
       dispatch({

@@ -109,7 +109,8 @@ function rootReducer(state = initialState, action) {
       localStorage.setItem("token", userIngreso.token);
       localStorage.setItem("loginUser", JSON.stringify(userIngreso));
       const expirationDateIngreso = new Date(
-        new Date().getTime() + 3600 * 1000
+        // new Date().getTime() + 3600 * 1000
+        new Date().getTime() + 300 * 1000
       );
       localStorage.setItem("expirationDate", expirationDateIngreso);
       return {
