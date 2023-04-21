@@ -1,13 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import promos from "../images/promos.jpg";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  deleteFromCart,
-  getDatosUser,
-  getFav,
-  getPromo,
-  getUserCart,
-} from "../../Redux/Actions";
+import {deleteFromCart,getDatosUser,getFav,getPromo,getUserCart,} from "../../Redux/Actions";
 import swal from "sweetalert";
 import { useEffect, useState } from "react";
 
@@ -42,10 +36,7 @@ export default function Cart() {
       } catch (error) {
         //para mostrar los error que llegan del back
         let errorMessage = "Ocurrió un error";
-        if (
-          error.response &&
-          error.response.data &&
-          error.response.data.error
+        if (error.response &&error.response.data && error.response.data.error
         ) {
           const { error: errorCode } = error.response.data;
           switch (errorCode) {
@@ -70,6 +61,7 @@ export default function Cart() {
         //reviso si tengo un codigo y si ese codigo pertene a un descuento de promo
         const porcentaje = descuento.discount / 100;
         const newPrice = totalPrice - totalPrice * porcentaje;
+        console.log("newPrice", newPrice);
         setNewPrice(newPrice);
       }
     } catch (error) {

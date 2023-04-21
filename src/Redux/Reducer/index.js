@@ -75,6 +75,7 @@ const initialState = {
   userCompras: null,
   ordenesCompras: null,
   allOrdenesCompras: null,
+  promotions: null,
 };
 
 const storedUser = localStorage.getItem("loginUser");
@@ -431,6 +432,13 @@ function rootReducer(state = initialState, action) {
         ...state,
         allOrdenesCompras: datosAllOrdenes,
       };
+    
+    case GET_PROMOTIONS:
+      const promo = action.payload;
+        return {
+          ...state,
+          promotions: promo
+        }
 
     default:
       return state;
