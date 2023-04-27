@@ -17,13 +17,12 @@ import {getAuth} from 'firebase/auth'
 // Your web app's Firebase configuration
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDAD_WLCIxTcPYmw45xXcmVLAON10eSeJU",
-  authDomain: "api-login-firebase.firebaseapp.com",
-  projectId: "api-login-firebase",
-  storageBucket: "api-login-firebase.appspot.com",
-  messagingSenderId: "593408536054",
-  appId: "1:593408536054:web:1abf9ccaca7e725f762bd7",
-  measurementId: "G-B0DDZTTXCH"
+  apiKey: "AIzaSyArU5WhexH6DepeAdqV8CIyyRALXyV2UG8",
+  authDomain: "footweard-6144c.firebaseapp.com",
+  projectId: "footweard-6144c",
+  storageBucket: "footweard-6144c.appspot.com",
+  messagingSenderId: "768702479467",
+  appId: "1:768702479467:web:394194a24a52e3052fc52e"
 };
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
